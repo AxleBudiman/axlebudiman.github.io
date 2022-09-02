@@ -1,0 +1,600 @@
+@font-face {
+    font-family: "MADE Sunflower";
+    src: url("./assets/webfont/Made-Sunflower.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Uncut Sans";
+    src: url("./assets/webfont/Uncut-Sans-Medium.woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Uncut Sans";
+    src: url("./assets/webfont/Uncut-Sans-Bold.woff2");
+    font-weight: 700;
+    font-style: bold;
+}
+
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Uncut Sans', 'Manrope', sans-serif;
+    background-color: #FFFDF8;
+    color: #101010;
+}
+
+header {
+    /* background: #FFFDF8;
+    color: #101010; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    position: sticky;
+    top: 0;
+    border-bottom: #101010 1px solid;
+}
+
+.logo  {
+    margin-right: auto;
+    margin-left: 140px;
+    cursor: pointer;
+    height: 40px;
+}
+
+nav {
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 120px;
+}
+
+nav li {
+    list-style-type: none;
+    padding: 0 20px;
+}
+
+nav li:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    display: block;
+    transition: all .3s ease-in;
+    bottom: 25%;
+}
+
+nav li:hover::after {
+    width: 3%;
+    height: 3px;
+    background-color: #FFB628;
+}
+
+nav li a {
+    color: #101010;
+    text-decoration: none; 
+}
+
+nav ul {
+    display: flex;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    /* background: #FFFDF8;
+    color: #101010; */
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+#intro {
+    padding-top: 60px;
+    border-bottom: #101010 1px solid;
+}
+
+.intro-content {
+    flex-basis: 50%;    
+}
+
+.intro img {
+    max-width: 600px;
+    /* margin-left: auto; */
+}
+
+.span {
+    color: #FFB628;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.intro-content h1 {
+    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 1em;
+    padding-top: 130px;
+}
+
+.intro-content h1 span {
+    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-size: 80px;
+    color: #FFB628;
+}
+
+.intro-content p {
+    font-weight: 500;
+    padding: 20px 0 40px 0;
+    line-height: 2em;
+}
+
+.intro-content button {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    border: #101010 2px solid;
+    background: #FFB628;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 50px;
+    align-self: flex-start;
+    transition: all .2s ease-in;
+}
+
+.intro-content button:hover {
+    border: #FFB628 2px solid;
+    color: #FFB628;
+    background: #FFFDF8;
+}
+
+#about {
+    padding-top: 60px;
+    border-bottom: #101010 1px solid;
+}
+
+.about-content {
+    flex-basis: 40%;
+}
+
+.about img {
+    flex-basis: 60%;
+    max-width: 550px;
+    /* position: relative;
+    right: -150px;
+    bottom: 40px; */
+    /* margin: -60px 0 0 120px; */
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+.about-content h2 {
+    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-size: 48px;
+    line-height: 1em;
+    padding-top: 60px;
+}
+
+.about-content h2 span {
+    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-size: 48px;
+    color: #FFB628;
+}
+
+.about-content p {
+    font-weight: 500;
+    padding: 20px 0;
+    line-height: 2em;
+}
+
+.about-content mark {
+    padding: 2px;
+    border-radius: 20px;
+    background-color: #FFB628;
+}
+
+#services {
+    padding: 60px 0;
+    border-bottom: #101010 1px solid;
+}
+
+.services-content h2 {
+    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-size: 48px;
+    line-height: 1em;
+    padding-top: 60px;
+}
+
+.services-content h2 span {
+    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-size: 48px;
+    color: #FFB628;
+}
+
+.services-content p {
+    font-weight: 500;
+    padding: 20px 0;
+    line-height: 2em;
+}
+
+.label {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.label-item {
+    font-size: 18px;
+    font-weight: 500;
+    background: #FFFDF8;
+    border: #FFB628 2px solid;
+    border-radius: 50px;
+    padding: 16px 24px;
+    margin: 0 15px 15px 0;
+    transition: .2s ease-in;
+}
+
+.label-item:hover {
+    background: #FFB628
+}
+
+#projects {
+    padding: 60px 0;
+    border-bottom: #101010 1px solid;
+}
+
+.projects-content {
+    margin-bottom: 60px;
+}
+
+.projects-content h2 {
+    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-size: 48px;
+    line-height: 1em;
+    padding: 60px 0 50px 0;
+}
+
+.projects-content h2 span {
+    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-size: 48px;
+    color: #FFB628;
+}
+
+.galery-item {
+    max-width: 300px;
+    padding: 0 20px 15px 20px;
+}
+
+.galery-item h3 {
+    color: #101010;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.galery-item p {
+    font-weight: 500;
+    padding: 12px 0;
+    line-height: 2em;
+}
+
+.galery-image {
+    border-radius: 200px 200px 0 0;
+    border: #101010 1px solid;
+    margin-bottom: 24px;
+}
+
+.galery-badge {
+    padding: 20px 0;
+}
+
+.badge {
+    margin: 0 8px 8px 0;
+}
+
+.zero-label {
+    border: #FFFDF8 1px solid;
+    color: #FFFDF8;
+    background: #FFFDF8;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 40px;
+    align-self: flex-start;
+    padding: 2px 10px;
+}
+
+.first-label {
+    border: #FFB628 1px solid;
+    color: #FFB628;
+    background: #fff2d9;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 40px;
+    align-self: flex-start;
+    padding: 2px 10px;
+}
+
+.second-label {
+    border: #ff9028 1px solid;
+    color: #ff9028;
+    background: #ffdebf;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 40px;
+    align-self: flex-start;
+    padding: 2px 10px;
+}
+
+.third-label {
+    border: #ff5e28 1px solid;
+    color: #ff5e28;
+    background: #ffb69e;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 40px;
+    align-self: flex-start;
+    padding: 2px 10px;
+}
+
+.galery-item button {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    border: #101010 0px solid;
+    color: #101010;
+    cursor: pointer;
+    text-decoration: underline;
+    /* background: #FFB628; */
+    /* padding: 8px 16px; */
+    /* border-radius: 50px; */
+    align-self: flex-start;
+    transition: all .2s ease-in;
+}
+
+.galery-item button:hover {
+    color: #FFB628;
+}
+
+.row-2 {
+    margin-top: 20px;
+}
+
+.load-more {
+    padding-left: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-more p:hover {
+    color: #101010;
+}
+
+.load-more p {
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFB628;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.arrow {
+    border: solid #FFB628;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+  }
+  
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+#contact {
+    padding: 60px 0;
+}
+
+.contact-content {
+    flex-basis: 50%;
+}
+
+/* .contact-box img {
+    flex-basis: 50%;
+    max-width: 300px;
+    max-height: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+} */
+  
+.contact-content-intro h2 {
+    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-size: 48px;
+    line-height: 1em;
+    padding-top: 60px;
+}
+
+.contact-content-intro h2 span {
+    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-size: 48px;
+    color: #FFB628;
+}
+
+.contact-content-intro p {
+    font-weight: 500;
+    padding: 20px 0;
+    line-height: 2em;
+}
+
+.contact-content form {
+    padding-top: 12px;
+}
+
+#name, #phone, #email {
+    font-size: 16px;
+    border: #101010 1px solid;
+    border-radius: 15px;
+    background: #fff;
+    padding: 12px 0 12px 12px;
+    margin: 8px 0;
+    width: 500px;
+}
+
+#brief {
+    font-size: 16px;
+    border: #101010 1px solid;
+    border-radius: 15px;
+    background: #fff;
+    padding: 12px 0 12px 12px;
+    margin: 8px 0;
+    width: 500px;
+}
+
+#submit {
+    padding-top: 24px;
+}
+
+#submit button {
+    font-size: 18px;
+    font-weight: 700;
+    border: #101010 2px solid;
+    background: #FFB628;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 50px;
+    transition: all .2s ease-in;
+}
+
+#submit button:hover {
+    border: #FFB628 2px solid;
+    color: #FFB628;
+    background: #FFFDF8;
+}
+
+aside img {
+    max-width: 250px;
+}
+
+.contact-ornament {
+    margin-left: 120px;    
+}
+
+.bio {
+    /* max-width: 800px; */
+    /* flex-basis: 50%; */
+    max-width: 600px;
+    border: #101010 1px solid;
+    border-radius: 40px;
+    margin-top: auto;
+    margin-right: auto;
+    padding: 40px 80px 0 80px;
+    background: #FFB628;
+    box-shadow: 0 4px 12px 0 #d4c9b3;
+}
+
+.bio header, figure, th, td {
+    background: #FFB628;
+}
+
+.bio h3 {
+    background: #FFB628;
+}
+
+.bio header {
+    padding: 0 0 24px 0;
+}
+
+.bio img {
+    border-radius: 2000px;
+    border: #101010 2px solid;
+    max-width: 150px;
+}
+
+.bio h3 {
+    font-weight: 500;
+    font-size: 18px;
+    border-bottom: #101010 1px solid;
+    padding: 12px 0;
+    text-align: center;
+}
+.bio table {
+    padding: 20px 0 24px 0;
+    text-align: left;
+    background: #FFB628;
+    align-items: center;
+}
+
+.table-content h3 {
+    font-weight: 700;
+}
+
+.table-content tr, iconify-icon {
+    background: #FFB628;
+}
+
+.table-content tr a {
+    background: #FFB628;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+
+.table-content tr a:hover {
+    color: #FFFDF8;
+}
+
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    bottom: 0;
+    border-top: #101010 1px solid;
+    background: #FFB628;
+}
+
+footer section {
+    margin-right: auto;
+    background: #FFB628;
+}
+
+footer img {
+    cursor: pointer;
+    background: #FFB628;
+}
+
+footer ul {
+    background: #FFB628;
+    margin-right: auto;
+    margin-left: 140px;
+    cursor: pointer;
+}
+
+footer li {
+    padding: 4px 0;
+    background: #FFB628;
+    list-style-type: none;
+    transition: all .2s ease-in;
+}
+
+footer li:hover {
+    color: #FFFDF8;
+}
+
+.iconify-inline {
+    background: #FFB628;
+}
