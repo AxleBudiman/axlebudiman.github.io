@@ -1,36 +1,31 @@
-@font-face {
-    font-family: "MADE Sunflower";
-    src: url("./assets/webfont/Made-Sunflower.otf");
-    font-weight: normal;
-    font-style: normal;
-}
+:root {
+    --mainColor: #FFB628;
+    --bgColor: #FFFDF8;
+    --textBlack: #101010;
+    --textWhite: #FFFFFF;
+    --firstLabelBg: #FFF2D9;
+    --secondLabelColor: #FF9028;
+    --secondLabelBg: #FFB69E;
+    --thirdLabelColor: #FF5E28;
+    --thirdLabelBg: #FFB69E;
 
-@font-face {
-    font-family: "Uncut Sans";
-    src: url("./assets/webfont/Uncut-Sans-Medium.woff2");
-    font-weight: 500;
-    font-style: normal;
-}
+    --border: #101010 1px solid;
+    --borderBtn: #101010 2px solid;
 
-@font-face {
-    font-family: "Uncut Sans";
-    src: url("./assets/webfont/Uncut-Sans-Bold.woff2");
-    font-weight: 700;
-    font-style: bold;
+    --headFont: 'Fraunces', serif;
+    --paragraphFont: 'Manrope', sans-serif;
 }
 
 *, html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Uncut Sans', 'Manrope', sans-serif;
-    background-color: #FFFDF8;
-    color: #101010;
+    font-family: var(--paragraphFont);
+    background-color: var(--bgColor);
+    color: var(--textBlack);
 }
 
 header {
-    /* background: #FFFDF8;
-    color: #101010; */
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -39,20 +34,30 @@ header {
     padding: 30px 20px;
     position: sticky;
     top: 0;
-    border-bottom: #101010 1px solid;
+    border-bottom: var(--border);
 }
 
-.logo  {
+header a img {
     margin-right: auto;
     margin-left: 140px;
     cursor: pointer;
     height: 40px;
 }
 
+header a iconify-icon {
+    display: none;
+}
+
+/* .menu {
+    background: #FFFDF8;
+    cursor: pointer;
+} */
+
 nav {
     font-weight: 600;
     font-size: 18px;
     margin-right: 120px;
+    margin-left: auto;
 }
 
 nav li {
@@ -73,11 +78,10 @@ nav li:after {
 nav li:hover::after {
     width: 3%;
     height: 3px;
-    background-color: #FFB628;
+    background-color: var(--mainColor);
 }
 
 nav li a {
-    color: #101010;
     text-decoration: none; 
 }
 
@@ -96,8 +100,6 @@ nav ul {
 }
 
 .content {
-    /* background: #FFFDF8;
-    color: #101010; */
     margin: 0 auto;
     max-width: 1200px;
     display: flex;
@@ -106,50 +108,55 @@ nav ul {
 
 #intro {
     padding-top: 60px;
-    border-bottom: #101010 1px solid;
+    border-bottom: var(--border);
 }
 
 .intro-content {
-    flex-basis: 50%;    
+    flex-basis: 600px;
 }
 
 .intro img {
     max-width: 600px;
-    /* margin-left: auto; */
 }
 
 .span {
     color: #FFB628;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 700;
+}
+
+h1, h2 {
+    font-family: var(--headFont);
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 .intro-content h1 {
-    font-family: 'MADE Sunflower', 'Fraunces', serif;
-    font-weight: 900;
+    font-family: var(--headFont);
+    font-weight: 800;
     font-size: 80px;
     line-height: 1em;
-    padding-top: 130px;
+    padding-top: 80px;
 }
 
 .intro-content h1 span {
-    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-family: var(--headFont);
     font-size: 80px;
-    color: #FFB628;
+    color: var(--mainColor);
 }
 
 .intro-content p {
-    font-weight: 500;
-    padding: 20px 0 40px 0;
-    line-height: 2em;
+    font-weight: 600;
+    padding: 30px 0 40px 0;
+    line-height: 2.2em;
 }
 
 .intro-content button {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 800;
     text-align: left;
-    border: #101010 2px solid;
-    background: #FFB628;
+    border: var(--borderBtn);
+    background: var(--mainColor);
     cursor: pointer;
     padding: 12px 24px;
     border-radius: 50px;
@@ -159,13 +166,13 @@ nav ul {
 
 .intro-content button:hover {
     border: #FFB628 2px solid;
-    color: #FFB628;
-    background: #FFFDF8;
+    color: var(--mainColor);
+    background: var(--bgColor);
 }
 
 #about {
     padding-top: 60px;
-    border-bottom: #101010 1px solid;
+    border-bottom: var(--border);
 }
 
 .about-content {
@@ -175,61 +182,57 @@ nav ul {
 .about img {
     flex-basis: 60%;
     max-width: 550px;
-    /* position: relative;
-    right: -150px;
-    bottom: 40px; */
-    /* margin: -60px 0 0 120px; */
     margin-left: auto;
     margin-bottom: auto;
 }
 
 .about-content h2 {
-    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-family: var(--headFont);
     font-size: 48px;
     line-height: 1em;
     padding-top: 60px;
 }
 
 .about-content h2 span {
-    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-family: var(--headFont);
     font-size: 48px;
-    color: #FFB628;
+    color: var(--mainColor);
 }
 
 .about-content p {
-    font-weight: 500;
+    font-weight: 600;
     padding: 20px 0;
-    line-height: 2em;
+    line-height: 2.2em;
 }
 
 .about-content mark {
     padding: 2px;
     border-radius: 20px;
-    background-color: #FFB628;
+    background-color: var(--mainColor);
 }
 
 #services {
     padding: 60px 0;
-    border-bottom: #101010 1px solid;
+    border-bottom: var(--border);
 }
 
 .services-content h2 {
-    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-family: var(--headFont);
     font-size: 48px;
     line-height: 1em;
     padding-top: 60px;
 }
 
 .services-content h2 span {
-    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-family: var(--headFont);
     font-size: 48px;
-    color: #FFB628;
+    color: var(--mainColor);
 }
 
 .services-content p {
-    font-weight: 500;
+    font-weight: 600;
     padding: 20px 0;
-    line-height: 2em;
+    line-height: 2.2em;
 }
 
 .label {
@@ -240,8 +243,8 @@ nav ul {
 
 .label-item {
     font-size: 18px;
-    font-weight: 500;
-    background: #FFFDF8;
+    font-weight: 600;
+    background: var(--bgColor);
     border: #FFB628 2px solid;
     border-radius: 50px;
     padding: 16px 24px;
@@ -250,51 +253,57 @@ nav ul {
 }
 
 .label-item:hover {
-    background: #FFB628
+    background: var(--mainColor);
 }
 
 #projects {
     padding: 60px 0;
-    border-bottom: #101010 1px solid;
+    border-bottom: var(--border);
 }
 
 .projects-content {
-    margin-bottom: 60px;
+    padding-top: 20px;
 }
 
 .projects-content h2 {
-    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-family: var(--headFont);
     font-size: 48px;
     line-height: 1em;
-    padding: 60px 0 50px 0;
+    padding-top: 60px;
 }
 
 .projects-content h2 span {
-    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-family: var(--headFont);
     font-size: 48px;
-    color: #FFB628;
+    color: var(--mainColor);
+}
+
+.projects-content p {
+    font-weight: 600;
+    padding: 20px 0;
+    line-height: 2.2em;
 }
 
 .galery-item {
     max-width: 300px;
-    padding: 0 20px 15px 20px;
+    padding: 0 20px 60px 20px;
 }
 
 .galery-item h3 {
-    color: #101010;
+    color: var(--textBlack);
     font-weight: 800;
     font-size: 28px;
 }
 
 .galery-item p {
-    font-weight: 500;
+    font-weight: 600;
     padding: 12px 0;
-    line-height: 2em;
+    line-height: 2.2em;
 }
 
 .galery-image {
     border-radius: 200px 200px 0 0;
-    border: #101010 1px solid;
+    border: var(--border);
     margin-bottom: 24px;
 }
 
@@ -306,23 +315,12 @@ nav ul {
     margin: 0 8px 8px 0;
 }
 
-.zero-label {
-    border: #FFFDF8 1px solid;
-    color: #FFFDF8;
-    background: #FFFDF8;
-    font-weight: 500;
-    font-size: 14px;
-    border-radius: 40px;
-    align-self: flex-start;
-    padding: 2px 10px;
-}
-
 .first-label {
     border: #FFB628 1px solid;
-    color: #FFB628;
-    background: #fff2d9;
+    color: var(--mainColor);
+    background: var(--firstLabelBg);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     border-radius: 40px;
     align-self: flex-start;
     padding: 2px 10px;
@@ -330,10 +328,10 @@ nav ul {
 
 .second-label {
     border: #ff9028 1px solid;
-    color: #ff9028;
-    background: #ffdebf;
-    font-weight: 500;
-    font-size: 14px;
+    color: var(--secondLabelColor);
+    background: var(--secondLabelBg);
+    font-weight: 600;
+    font-size: 13px;
     border-radius: 40px;
     align-self: flex-start;
     padding: 2px 10px;
@@ -341,10 +339,10 @@ nav ul {
 
 .third-label {
     border: #ff5e28 1px solid;
-    color: #ff5e28;
-    background: #ffb69e;
+    color: var(--thirdLabelColor);
+    background: var(--thirdLabelBg);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     border-radius: 40px;
     align-self: flex-start;
     padding: 2px 10px;
@@ -354,19 +352,16 @@ nav ul {
     font-size: 18px;
     font-weight: 700;
     text-align: left;
-    border: #101010 0px solid;
-    color: #101010;
+    border: var(--border);
+    color: var(--textBlack);
     cursor: pointer;
     text-decoration: underline;
-    /* background: #FFB628; */
-    /* padding: 8px 16px; */
-    /* border-radius: 50px; */
     align-self: flex-start;
     transition: all .2s ease-in;
 }
 
 .galery-item button:hover {
-    color: #FFB628;
+    color: var(--mainColor);
 }
 
 .row-2 {
@@ -380,13 +375,13 @@ nav ul {
 }
 
 .load-more p:hover {
-    color: #101010;
+    color: var(--textBlack);
 }
 
 .load-more p {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 18px;
-    color: #FFB628;
+    color: var(--mainColor);
     cursor: pointer;
     transition: all .2s ease-in;
 }
@@ -420,22 +415,22 @@ nav ul {
 } */
   
 .contact-content-intro h2 {
-    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-family: var(--headFont);
     font-size: 48px;
     line-height: 1em;
     padding-top: 60px;
 }
 
 .contact-content-intro h2 span {
-    font-family: 'MADE Sunflower', 'Fraunces', serif;
+    font-family: var(--headFont);
     font-size: 48px;
-    color: #FFB628;
+    color: var(--mainColor);
 }
 
 .contact-content-intro p {
-    font-weight: 500;
+    font-weight: 600;
     padding: 20px 0;
-    line-height: 2em;
+    line-height: 2.2em;
 }
 
 .contact-content form {
@@ -444,9 +439,10 @@ nav ul {
 
 #name, #phone, #email {
     font-size: 16px;
-    border: #101010 1px solid;
+    font-weight: 600;
+    border: var(--border);
     border-radius: 15px;
-    background: #fff;
+    background: var(--textWhite);
     padding: 12px 0 12px 12px;
     margin: 8px 0;
     width: 500px;
@@ -454,9 +450,9 @@ nav ul {
 
 #brief {
     font-size: 16px;
-    border: #101010 1px solid;
+    border: var(--border);
     border-radius: 15px;
-    background: #fff;
+    background: var(--textWhite);
     padding: 12px 0 12px 12px;
     margin: 8px 0;
     width: 500px;
@@ -468,9 +464,9 @@ nav ul {
 
 #submit button {
     font-size: 18px;
-    font-weight: 700;
-    border: #101010 2px solid;
-    background: #FFB628;
+    font-weight: 800;
+    border: var(--borderBtn);
+    background: var(--mainColor);
     cursor: pointer;
     padding: 12px 24px;
     border-radius: 50px;
@@ -479,8 +475,13 @@ nav ul {
 
 #submit button:hover {
     border: #FFB628 2px solid;
-    color: #FFB628;
-    background: #FFFDF8;
+    color: var(--mainColor);
+    background: var(--bgColor);
+}
+
+aside {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 aside img {
@@ -492,40 +493,39 @@ aside img {
 }
 
 .bio {
-    /* max-width: 800px; */
-    /* flex-basis: 50%; */
     max-width: 600px;
-    border: #101010 1px solid;
+    border: var(--border);
     border-radius: 40px;
     margin-top: auto;
     margin-right: auto;
     padding: 40px 80px 0 80px;
-    background: #FFB628;
+    background: var(--mainColor);
     box-shadow: 0 4px 12px 0 #d4c9b3;
 }
 
-.bio header, figure, th, td {
-    background: #FFB628;
+.bio figure, th, td {
+    background: var(--mainColor);
 }
 
-.bio h3 {
-    background: #FFB628;
-}
-
-.bio header {
+.bio figure {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 0 24px 0;
 }
 
 .bio img {
+    display: table-cell;
+    vertical-align: middle;
     border-radius: 2000px;
     border: #101010 2px solid;
     max-width: 150px;
 }
 
 .bio h3 {
-    font-weight: 500;
-    font-size: 18px;
-    border-bottom: #101010 1px solid;
+    border-bottom: var(--border);
+    border-top: var(--border);
+    background: var(--mainColor);
     padding: 12px 0;
     text-align: center;
 }
@@ -537,15 +537,21 @@ aside img {
 }
 
 .table-content h3 {
-    font-weight: 700;
+    font-weight: 800;
+}
+
+.table-content th {
+    font-weight: 800;
 }
 
 .table-content tr, iconify-icon {
     background: #FFB628;
+    font-weight: 500;
 }
 
 .table-content tr a {
     background: #FFB628;
+    font-weight: 500;
     text-decoration: none;
     transition: all 0.2s ease-in;
 }
@@ -585,6 +591,7 @@ footer ul {
 }
 
 footer li {
+    font-weight: 500;
     padding: 4px 0;
     background: #FFB628;
     list-style-type: none;
@@ -598,3 +605,9 @@ footer li:hover {
 .iconify-inline {
     background: #FFB628;
 }
+
+/* @media screen and  (min-width:1200px) {
+    .content {
+        padding: 0 30px;
+    }
+} */
