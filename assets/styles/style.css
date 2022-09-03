@@ -41,7 +41,7 @@ header a img {
     margin-right: auto;
     margin-left: 140px;
     cursor: pointer;
-    height: 40px;
+    max-height: 40px;
 }
 
 header a iconify-icon {
@@ -89,9 +89,16 @@ nav ul {
     display: flex;
 }
 
+.menu {
+    margin-right: 0;
+    width: 60px;
+    background: transparent;
+}
+
 .flex-row {
     display: flex;
     flex-wrap: wrap;
+    gap: 1;
 }
 
 .flex-column {
@@ -112,7 +119,7 @@ nav ul {
 }
 
 .intro-content {
-    flex-basis: 600px;
+    flex-basis: 50%;
 }
 
 .intro img {
@@ -134,14 +141,15 @@ h1, h2 {
 .intro-content h1 {
     font-family: var(--headFont);
     font-weight: 800;
-    font-size: 80px;
+    /* font-size: 80px; */
+    font-size: clamp(2rem, 1rem + 10vw, 5rem);
     line-height: 1em;
     padding-top: 80px;
 }
 
 .intro-content h1 span {
     font-family: var(--headFont);
-    font-size: 80px;
+    font-size: clamp(2rem, 1rem + 10vw, 5rem);
     color: var(--mainColor);
 }
 
@@ -606,8 +614,76 @@ footer li:hover {
     background: #FFB628;
 }
 
-/* @media screen and  (min-width:1200px) {
+@media screen and (max-width:1200px) {
     .content {
-        padding: 0 30px;
+        padding: 0 40px;
     }
-} */
+    .intro-content {
+        flex-basis: 40%;
+    }
+    footer ul {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:1080px) {
+    header a img {
+        margin-left: 20px;
+    }
+    nav {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+    nav li:hover::after{
+        width: 10%;
+    }
+    .intro {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 60px;
+    }
+    .intro img {
+        display: none;
+    }
+    .about {
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+    .about img {
+        display: none;
+    }
+    .contact-ornament {
+        display: none;
+    }
+    #submit {
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:530px) {
+    body {
+        justify-items: center;
+    }
+    header a img {
+        margin-left: 0;
+    }
+    nav {
+        margin-right: 0;
+        font-size: 13px;
+    }
+    .contact-content {
+        min-width: 315px;
+    }
+    #name, #phone, #email, #brief {
+        width: 100%;
+    }
+    table, tr {
+        vertical-align: top;
+    }
+    footer ul li section {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+}
