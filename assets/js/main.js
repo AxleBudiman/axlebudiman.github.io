@@ -8,6 +8,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () => {
+  menu.classList.toggle('dropdown');
+  navbar.classList.toggle('active');
+};
+
+window.onscroll = () => {
+  menu.classList.remove('dropdown');
+  navbar.classList.remove('active');
+}
+
 // form 'semi-validation'
 // input
 const fullName = document.querySelector("#name");
